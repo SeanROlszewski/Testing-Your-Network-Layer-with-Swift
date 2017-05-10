@@ -14,6 +14,11 @@
 		9D55CD981EBE76C800C3A22A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9D55CD961EBE76C800C3A22A /* LaunchScreen.storyboard */; };
 		9D55CDA31EBE76C800C3A22A /* ClientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D55CDA21EBE76C800C3A22A /* ClientTests.swift */; };
 		9D55CDAE1EBE76C800C3A22A /* ClientUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D55CDAD1EBE76C800C3A22A /* ClientUITests.swift */; };
+		9D8E36671EBF7A5E007CD921 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D8E36661EBF7A5E007CD921 /* Nimble.framework */; };
+		9D8E36681EBF7A5E007CD921 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D8E36661EBF7A5E007CD921 /* Nimble.framework */; };
+		9D8E366A1EBF7A71007CD921 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D8E36691EBF7A71007CD921 /* Quick.framework */; };
+		9D8E366B1EBF7A71007CD921 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D8E36691EBF7A71007CD921 /* Quick.framework */; };
+		9D8E366D1EBF7BFF007CD921 /* Client.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D8E366C1EBF7BFF007CD921 /* Client.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +52,11 @@
 		9D55CDA91EBE76C800C3A22A /* ClientUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ClientUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D55CDAD1EBE76C800C3A22A /* ClientUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientUITests.swift; sourceTree = "<group>"; };
 		9D55CDAF1EBE76C800C3A22A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9D55CDBB1EBE774F00C3A22A /* Cartfile.private */ = {isa = PBXFileReference; lastKnownFileType = text; path = Cartfile.private; sourceTree = "<group>"; };
+		9D6CA36B1EC3CE71007D8F54 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		9D8E36661EBF7A5E007CD921 /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/iOS/Nimble.framework; sourceTree = "<group>"; };
+		9D8E36691EBF7A71007CD921 /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/iOS/Quick.framework; sourceTree = "<group>"; };
+		9D8E366C1EBF7BFF007CD921 /* Client.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Client.swift; path = Client/Client.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +71,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9D8E366A1EBF7A71007CD921 /* Quick.framework in Frameworks */,
+				9D8E36671EBF7A5E007CD921 /* Nimble.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -68,6 +80,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9D8E366B1EBF7A71007CD921 /* Quick.framework in Frameworks */,
+				9D8E36681EBF7A5E007CD921 /* Nimble.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -77,10 +91,13 @@
 		9D55CD811EBE76C800C3A22A = {
 			isa = PBXGroup;
 			children = (
+				9D6CA36B1EC3CE71007D8F54 /* .gitignore */,
+				9D55CDBB1EBE774F00C3A22A /* Cartfile.private */,
+				9D8E36691EBF7A71007CD921 /* Quick.framework */,
+				9D8E36661EBF7A5E007CD921 /* Nimble.framework */,
 				9D55CD8C1EBE76C800C3A22A /* Client */,
 				9D55CDA11EBE76C800C3A22A /* ClientTests */,
 				9D55CDAC1EBE76C800C3A22A /* ClientUITests */,
-				9D55CD8B1EBE76C800C3A22A /* Products */,
 			);
 			sourceTree = "<group>";
 		};
@@ -92,6 +109,7 @@
 				9D55CDA91EBE76C800C3A22A /* ClientUITests.xctest */,
 			);
 			name = Products;
+			path = ..;
 			sourceTree = "<group>";
 		};
 		9D55CD8C1EBE76C800C3A22A /* Client */ = {
@@ -99,8 +117,9 @@
 			children = (
 				9D55CD8D1EBE76C800C3A22A /* AppDelegate.swift */,
 				9D55CD8F1EBE76C800C3A22A /* ViewController.swift */,
-				9D55CD911EBE76C800C3A22A /* Main.storyboard */,
+				9D55CD8B1EBE76C800C3A22A /* Products */,
 				9D55CD941EBE76C800C3A22A /* Assets.xcassets */,
+				9D55CD911EBE76C800C3A22A /* Main.storyboard */,
 				9D55CD961EBE76C800C3A22A /* LaunchScreen.storyboard */,
 				9D55CD991EBE76C800C3A22A /* Info.plist */,
 			);
@@ -111,6 +130,7 @@
 			isa = PBXGroup;
 			children = (
 				9D55CDA21EBE76C800C3A22A /* ClientTests.swift */,
+				9D8E366C1EBF7BFF007CD921 /* Client.swift */,
 				9D55CDA41EBE76C800C3A22A /* Info.plist */,
 			);
 			path = ClientTests;
@@ -152,6 +172,7 @@
 				9D55CD9A1EBE76C800C3A22A /* Sources */,
 				9D55CD9B1EBE76C800C3A22A /* Frameworks */,
 				9D55CD9C1EBE76C800C3A22A /* Resources */,
+				9D8E36641EBF77BA007CD921 /* Set up Carthage */,
 			);
 			buildRules = (
 			);
@@ -170,6 +191,7 @@
 				9D55CDA51EBE76C800C3A22A /* Sources */,
 				9D55CDA61EBE76C800C3A22A /* Frameworks */,
 				9D55CDA71EBE76C800C3A22A /* Resources */,
+				9D8E36651EBF7928007CD921 /* Set up Carthage */,
 			);
 			buildRules = (
 			);
@@ -257,6 +279,41 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		9D8E36641EBF77BA007CD921 /* Set up Carthage */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/Quick.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Nimble.framework",
+			);
+			name = "Set up Carthage";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks\n";
+		};
+		9D8E36651EBF7928007CD921 /* Set up Carthage */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/Mac/Quick.framework",
+				"$(SRCROOT)/Carthage/Build/Mac/Nimble.framework",
+			);
+			name = "Set up Carthage";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		9D55CD861EBE76C800C3A22A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -264,6 +321,7 @@
 			files = (
 				9D55CD901EBE76C800C3A22A /* ViewController.swift in Sources */,
 				9D55CD8E1EBE76C800C3A22A /* AppDelegate.swift in Sources */,
+				9D8E366D1EBF7BFF007CD921 /* Client.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -443,6 +501,10 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				DEVELOPMENT_TEAM = H2983HKDVJ;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = ClientTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Soh.ClientTests;
@@ -458,6 +520,10 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				DEVELOPMENT_TEAM = H2983HKDVJ;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = ClientTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Soh.ClientTests;
@@ -472,6 +538,10 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = H2983HKDVJ;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = ClientUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Soh.ClientUITests;
@@ -486,6 +556,10 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = H2983HKDVJ;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = ClientUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Soh.ClientUITests;
@@ -514,6 +588,7 @@
 				9D55CDB41EBE76C800C3A22A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		9D55CDB51EBE76C800C3A22A /* Build configuration list for PBXNativeTarget "ClientTests" */ = {
 			isa = XCConfigurationList;
@@ -522,6 +597,7 @@
 				9D55CDB71EBE76C800C3A22A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		9D55CDB81EBE76C800C3A22A /* Build configuration list for PBXNativeTarget "ClientUITests" */ = {
 			isa = XCConfigurationList;
@@ -530,6 +606,7 @@
 				9D55CDBA1EBE76C800C3A22A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
