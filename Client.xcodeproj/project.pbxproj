@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9D45F7571EC7EC1B00824271 /* AsyncClientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D45F7561EC7EC1B00824271 /* AsyncClientTests.swift */; };
+		9D45F75A1EC7EE5300824271 /* Example.json in Resources */ = {isa = PBXBuildFile; fileRef = 9D45F7591EC7EE5300824271 /* Example.json */; };
 		9D55CD8E1EBE76C800C3A22A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D55CD8D1EBE76C800C3A22A /* AppDelegate.swift */; };
 		9D55CD901EBE76C800C3A22A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D55CD8F1EBE76C800C3A22A /* ViewController.swift */; };
 		9D55CD931EBE76C800C3A22A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9D55CD911EBE76C800C3A22A /* Main.storyboard */; };
@@ -39,6 +41,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9D45F7561EC7EC1B00824271 /* AsyncClientTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AsyncClientTests.swift; path = ClientTests/AsyncClientTests.swift; sourceTree = SOURCE_ROOT; };
+		9D45F7591EC7EE5300824271 /* Example.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Example.json; sourceTree = "<group>"; };
 		9D55CD8A1EBE76C800C3A22A /* Client.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Client.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D55CD8D1EBE76C800C3A22A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9D55CD8F1EBE76C800C3A22A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -88,13 +92,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9D45F7551EC7EBA300824271 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9D8E36691EBF7A71007CD921 /* Quick.framework */,
+				9D8E36661EBF7A5E007CD921 /* Nimble.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		9D55CD811EBE76C800C3A22A = {
 			isa = PBXGroup;
 			children = (
 				9D6CA36B1EC3CE71007D8F54 /* .gitignore */,
 				9D55CDBB1EBE774F00C3A22A /* Cartfile.private */,
-				9D8E36691EBF7A71007CD921 /* Quick.framework */,
-				9D8E36661EBF7A5E007CD921 /* Nimble.framework */,
+				9D45F7551EC7EBA300824271 /* Frameworks */,
 				9D55CD8C1EBE76C800C3A22A /* Client */,
 				9D55CDA11EBE76C800C3A22A /* ClientTests */,
 				9D55CDAC1EBE76C800C3A22A /* ClientUITests */,
@@ -115,6 +127,7 @@
 		9D55CD8C1EBE76C800C3A22A /* Client */ = {
 			isa = PBXGroup;
 			children = (
+				9D8E366C1EBF7BFF007CD921 /* Client.swift */,
 				9D55CD8D1EBE76C800C3A22A /* AppDelegate.swift */,
 				9D55CD8F1EBE76C800C3A22A /* ViewController.swift */,
 				9D55CD8B1EBE76C800C3A22A /* Products */,
@@ -130,7 +143,8 @@
 			isa = PBXGroup;
 			children = (
 				9D55CDA21EBE76C800C3A22A /* ClientTests.swift */,
-				9D8E366C1EBF7BFF007CD921 /* Client.swift */,
+				9D45F7561EC7EC1B00824271 /* AsyncClientTests.swift */,
+				9D45F7591EC7EE5300824271 /* Example.json */,
 				9D55CDA41EBE76C800C3A22A /* Info.plist */,
 			);
 			path = ClientTests;
@@ -267,6 +281,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9D45F75A1EC7EE5300824271 /* Example.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -330,6 +345,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9D55CDA31EBE76C800C3A22A /* ClientTests.swift in Sources */,
+				9D45F7571EC7EC1B00824271 /* AsyncClientTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -504,9 +520,14 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/OHHTTPStubs/OHHTTPStubs/Build/Products/Debug-iphonesimulator",
 				);
 				INFOPLIST_FILE = ClientTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/OHHTTPStubs/OHHTTPStubs/Build/Products/Debug-iphonesimulator",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = Soh.ClientTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
@@ -523,9 +544,14 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/OHHTTPStubs/OHHTTPStubs/Build/Products/Debug-iphonesimulator",
 				);
 				INFOPLIST_FILE = ClientTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/OHHTTPStubs/OHHTTPStubs/Build/Products/Debug-iphonesimulator",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = Soh.ClientTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
