@@ -23,10 +23,10 @@ struct NetworkClient {
     func get(resourceAt url: URL, completion: @escaping (Result<Data>) -> ()) {
         let dataTask = session.dataTask(with: url) { (data: Data?, urlResponse: URLResponse?, error: Error?) in
     
-//            guard error == nil else {
-//                completion(Result<Data>.failure(NetworkError.unspecified))
-//                return
-//            }
+            guard error == nil else {
+                completion(Result<Data>.failure(NetworkError.unspecified))
+                return
+            }
             
             completion(Result<Data>.success(data ?? Data()))
         }
